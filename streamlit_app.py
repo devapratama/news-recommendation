@@ -35,6 +35,10 @@ def recommend_news(news_data, tfidf_matrix, tfidf_vectorizer, keyword, categorie
 
 # Define a function to handle news display with pagination
 def display_news(news, items_per_page=10):
+    if news.empty:
+        st.write("Berita tidak ditemukan! Silahkan periksa kembali kata kunci Anda.")
+        return
+    
     # Calculate total pages
     total_pages = max(1, len(news) // items_per_page + (len(news) % items_per_page > 0))
 
@@ -109,7 +113,7 @@ def main():
         display_news(sorted_data)
 
     st.sidebar.markdown("---")
-    st.sidebar.text("Footer: Informasi Tambahan")
+    st.sidebar.text("github.com/devapratama")
 
 # Run the main function
 if __name__ == "__main__":
