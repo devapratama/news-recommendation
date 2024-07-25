@@ -113,7 +113,7 @@ def main():
         display_news(sorted_data)
 
     st.sidebar.markdown("---")
-    st.sidebar.text("[github.com/devapratama](https://github.com/devapratama)")
+    st.sidebar.markdown("[github.com/devapratama](https://github.com/devapratama)")
 
 # Run the main function
 if __name__ == "__main__":
